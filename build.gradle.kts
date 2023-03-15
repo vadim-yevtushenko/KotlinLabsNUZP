@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.8.0"
-    id("org.jetbrains.compose") version "1.2.1"
+    id("org.jetbrains.compose") version "1.3.0"
     id("com.github.gmazzo.buildconfig") version "3.1.0"
     application
 }
@@ -36,7 +36,7 @@ dependencies {
     }
     implementation(project(":caffe"))
     implementation(project(":juicefactory"))
-    implementation("com.diacht.ktest:library:1.0.5")
+    implementation("com.diacht.ktest:library:1.0.6")
     testImplementation(kotlin("test"))
 }
 
