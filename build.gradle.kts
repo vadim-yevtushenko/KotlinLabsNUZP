@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.8.0"
-//    id("org.jetbrains.compose") version "1.2.1"
+    id("org.jetbrains.compose") version "1.2.1"
     id("com.github.gmazzo.buildconfig") version "3.1.0"
     application
 }
@@ -12,7 +12,7 @@ subprojects {
     apply(plugin = "com.github.gmazzo.buildconfig")
 }
 
-val labNumber = 3
+val labNumber = 1
 
 allprojects {
     buildConfig {
@@ -34,7 +34,6 @@ dependencies {
     if (labNumber > 1) {
         implementation(project(":helloworld"))
     }
-//    implementation(project(":library"))
     implementation(project(":caffe"))
     implementation(project(":juicefactory"))
     implementation("com.diacht.ktest:library:1.0.5")
