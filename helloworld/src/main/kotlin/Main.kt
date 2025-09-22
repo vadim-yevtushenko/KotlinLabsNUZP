@@ -12,17 +12,25 @@ fun labNumber() : Int = BuildConfig.LAB_NUMBER
         println("Лабораторна робота №${labNumber()} користувача ${seed()}")
         startTestUi(seed(), labNumber())
 
-        println(iCalculate(98, 53, -25, -62, -102))
-        println(dCalculate(-40.46, -19.25, -132.98, 46.06, -146.25))
+        println(iCalculate())
+        println(dCalculate())
         println(strCalculate("ATGCJA", "ATGTJC"))
     }
 
-fun iCalculate(x0 : Int, x1 : Int, x2 : Int, x3 : Int, x4 : Int) : Double {
+fun iCalculate(x0 : Int = 98,
+               x1 : Int = 53,
+               x2 : Int = -25,
+               x3 : Int = -62,
+               x4 : Int = -102) : Double {
     val maxAbs = maxOf(abs(x0), abs(x1), abs(x2), abs(x3), abs(x4))
     return sin(maxAbs.toDouble())
 }
 
-fun dCalculate(x0 : Double, x1 : Double, x2 : Double, x3 : Double, x4 : Double) : Double {
+fun dCalculate(x0 : Double = -40.46,
+               x1 : Double = -19.25,
+               x2 : Double = -132.98,
+               x3 : Double = 46.06,
+               x4 : Double = -146.25) : Double {
     val maxAbs = maxOf(abs(x0), abs(x1), abs(x2), abs(x3), abs(x4))
     return ln(maxAbs)
 }
