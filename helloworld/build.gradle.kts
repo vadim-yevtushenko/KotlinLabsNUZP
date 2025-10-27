@@ -20,6 +20,7 @@ dependencies {
     implementation(Versions.library)
     implementation(compose.desktop.currentOs)
     testImplementation(kotlin("test"))
+    implementation(project(":caffe"))
 }
 
 tasks.test {
